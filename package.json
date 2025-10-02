@@ -1,6 +1,6 @@
 {
   "name": "@yuki-yano/human-in-the-loop",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Human-in-the-Loop MCP server for Node.js",
   "type": "module",
   "bin": {
