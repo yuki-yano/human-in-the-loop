@@ -1,5 +1,5 @@
 /**
- * 型定義のエントリーポイント
+ * Type definitions entry point
  */
 
 export * from "./config.js";
