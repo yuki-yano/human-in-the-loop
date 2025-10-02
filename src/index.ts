@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { loadConfiguration } from "./config/load.js";
 import { createDiscordBot } from "./discord/bot.js";
 import { createMCPServer } from "./mcp/server.js";

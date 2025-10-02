@@ -1,11 +1,14 @@
 {
   "name": "@yuki-yano/human-in-the-loop",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "description": "Human-in-the-Loop MCP server for Node.js",
   "type": "module",
   "bin": {
     "human-in-the-loop": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
@@ -14,7 +17,8 @@
     "format": "biome format --write .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "bun run build && bun run test && bun run typecheck"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.2",
