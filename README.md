@@ -133,6 +133,10 @@ bun run build
 - **Error Handling**: Tagged Union types for explicit error classification
 - **Type Safety**: Strict TypeScript with no implicit any
 
+## Acknowledgments
+
+This project is inspired by and based on [KOBA789/human-in-the-loop](https://github.com/KOBA789/human-in-the-loop), a Rust implementation of the Human-in-the-Loop MCP server.
+
 ## License
 
 MIT
