@@ -57,7 +57,20 @@ bunx @yuki-yano/human-in-the-loop
 
 ### MCP Client Configuration
 
-Add to your MCP client configuration:
+#### Claude Code CLI
+
+Add the MCP server using the `claude mcp add` command:
+
+```bash
+claude mcp add hitl bunx @yuki-yano/human-in-the-loop@latest \
+  --env DISCORD_TOKEN=your_discord_bot_token \
+  --env DISCORD_CHANNEL_ID=your_channel_id \
+  --env DISCORD_USER_ID=your_user_id
+```
+
+#### Manual Configuration
+
+Add to your MCP client configuration file:
 
 ```json
 {
