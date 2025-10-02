@@ -14,10 +14,10 @@ A Model Context Protocol (MCP) server that enables AI assistants to ask humans f
 
 ```bash
 # Using bunx (recommended)
-bunx @yuki-yano/human-in-the-loop
+bunx @yuki-yano/human-in-the-loop@latest
 
 # Or install globally
-bun add -g @yuki-yano/human-in-the-loop
+bun add -g @yuki-yano/human-in-the-loop@latest
 ```
 
 ## Configuration
@@ -40,7 +40,7 @@ RESPONSE_TIMEOUT=300000  # milliseconds (default: 300000 = 5 minutes)
 ### Start the MCP Server
 
 ```bash
-bunx @yuki-yano/human-in-the-loop
+bunx @yuki-yano/human-in-the-loop@latest
 ```
 
 ### Discord Bot Setup
@@ -77,7 +77,7 @@ Add to your MCP client configuration file:
   "mcpServers": {
     "human-in-the-loop": {
       "command": "bunx",
-      "args": ["@yuki-yano/human-in-the-loop"],
+      "args": ["@yuki-yano/human-in-the-loop@latest"],
       "env": {
         "DISCORD_TOKEN": "your_token",
         "DISCORD_CHANNEL_ID": "your_channel_id",
