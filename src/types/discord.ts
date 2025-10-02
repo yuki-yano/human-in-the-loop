@@ -1,5 +1,5 @@
 /**
- * Discord関連の型定義
+ * Discord-related type definitions
  */
 
 export type DiscordBotInstance = {

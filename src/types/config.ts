@@ -1,5 +1,5 @@
 /**
- * アプリケーション設定型
+ * Application configuration type
  */
 
 export type AppConfig = {

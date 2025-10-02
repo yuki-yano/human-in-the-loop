@@ -1,7 +1,7 @@
 import type { z } from "zod";
 
 /**
- * MCP関連の型定義
+ * MCP-related type definitions
  */
 
 export type ToolDefinition<TInput, TOutput> = {

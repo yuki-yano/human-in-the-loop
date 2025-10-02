@@ -1,5 +1,5 @@
 /**
- * Logger関連の型定義
+ * Logger-related type definitions
  */
 
 export type Logger = {
