@@ -1,5 +1,5 @@
 /**
- * Tagged Union型によるエラー定義
+ * Error definitions using Tagged Union pattern
  */
 
 export type ThreadCreationError =
@@ -19,7 +19,7 @@ export type ConfigError =
   | { kind: "INVALID_FORMAT"; field: string; message: string };
 
 /**
- * エラーを投げるヘルパー関数
+ * Helper functions to throw errors
  */
 export const throwThreadCreationError = (error: ThreadCreationError): never => {
   throw Object.assign(new Error(error.message), { name: "ThreadCreationError", ...error });
@@ -38,7 +38,7 @@ export const throwConfigError = (error: ConfigError): never => {
 };
 
 /**
- * 型ガード関数
+ * Type guard functions
  */
 export const isThreadCreationError = (error: unknown): error is Error & ThreadCreationError => {
   return error instanceof Error && error.name === "ThreadCreationError" && "kind" in error;

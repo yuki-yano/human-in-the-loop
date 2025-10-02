@@ -10,7 +10,7 @@ const isValidLogLevel = (value: string): value is AppConfig["logLevel"] => {
 };
 
 export const loadConfiguration = (env: NodeJS.ProcessEnv): AppConfig => {
-  // 必須環境変数のチェック
+  // Check required environment variables
   const discordBotToken = env.DISCORD_TOKEN;
   if (!discordBotToken) {
     throwConfigError({
@@ -38,7 +38,7 @@ export const loadConfiguration = (env: NodeJS.ProcessEnv): AppConfig => {
     });
   }
 
-  // Snowflake ID形式の検証
+  // Validate Snowflake ID format
   if (discordChannelId && !isValidSnowflakeId(discordChannelId)) {
     throwConfigError({
       kind: "INVALID_FORMAT",
@@ -55,7 +55,7 @@ export const loadConfiguration = (env: NodeJS.ProcessEnv): AppConfig => {
     });
   }
 
-  // オプション環境変数の読み込み
+  // Load optional environment variables
   const logLevelStr = env.LOG_LEVEL || "info";
   const logLevel = isValidLogLevel(logLevelStr) ? logLevelStr : "info";
 

@@ -18,7 +18,7 @@ export const createThreadForQuestion =
   async (question: string): Promise<ThreadInstance> => {
     const { client, channelId, userId } = deps;
 
-    // チャンネルを取得
+    // Fetch channel
     const channel = await client.channels.fetch(channelId);
 
     if (!channel) {
@@ -38,16 +38,16 @@ export const createThreadForQuestion =
     const textChannel = channel as TextChannel;
 
     try {
-      // スレッドを作成
+      // Create thread
       const thread = await textChannel.threads.create({
         name: prepareThreadTitle(question),
         autoArchiveDuration: 1440, // 1 day
       });
 
-      // メッセージを投稿
+      // Send message
       await thread.send(`<@${userId}> ${question}`);
 
-      // 応答待機関数を作成
+      // Create response awaiter
       const responseAwaiter = awaitUserResponse({
         thread,
         userId,
