@@ -12,7 +12,7 @@ describe("createLogger", () => {
   });
 
   it("should log debug message when level is debug", () => {
-    const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+    const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
     const logger = createLogger({ logLevel: "debug" });
 
     logger.debug("test message", { key: "value" });
@@ -23,7 +23,7 @@ describe("createLogger", () => {
   });
 
   it("should not log debug message when level is info", () => {
-    const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+    const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
     const logger = createLogger({ logLevel: "info" });
 
     logger.debug("test message");

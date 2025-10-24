@@ -17,12 +17,12 @@ export const createLogger = (config: LoggerConfig): Logger => {
   return {
     debug: (message: string, context?: Record<string, unknown>) => {
       if (shouldLog("debug")) {
-        console.log(`[DEBUG] ${message}`, context || {});
+        console.error(`[DEBUG] ${message}`, context || {});
       }
     },
     info: (message: string, context?: Record<string, unknown>) => {
       if (shouldLog("info")) {
-        console.log(`[INFO] ${message}`, context || {});
+        console.error(`[INFO] ${message}`, context || {});
       }
     },
     warn: (message: string, context?: Record<string, unknown>) => {
