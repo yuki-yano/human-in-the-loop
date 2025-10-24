@@ -1,16 +1,15 @@
 {
   "name": "@yuki-yano/human-in-the-loop",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Human-in-the-Loop MCP server for Node.js",
   "type": "module",
   "bin": {
     "human-in-the-loop": "./dist/index.js"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsdown",
+    "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
